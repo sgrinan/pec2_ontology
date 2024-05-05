@@ -1,0 +1,24 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:Passenger" "base:DatePublished" "base:Flight" "base:TripVerified" "base:Aircraft" "base:TypeTraveller" "base:Destination" "base:Aeroline" "base:Id" "base:Trip" "base:OverallRating" "base:Origin" "base:DateFlown" "base:OverallRatingNeutral" "base:OverallRatingNegative" "base:SeatType" "base:Comment" "base:OverallRatingPositive" "base:CommentTitle" "base:Country" ; /*classes style*/
+	"base:Comment" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"base:Destination" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:OverallRatingNeutral" -> "base:OverallRating" [ label = "rdfs:subClassOf" ];
+	"base:CommentTitle" -> "base:Comment" [ label = "rdfs:subClassOf" ];
+	"base:TripVerified" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:TypeTraveller" -> "base:Flight" [ label = "rdfs:subClassOf" ];
+	"base:Aircraft" -> "base:Flight" [ label = "rdfs:subClassOf" ];
+	"base:Aeroline" -> "base:Flight" [ label = "rdfs:subClassOf" ];
+	"base:Origin" -> "base:Trip" [ label = "rdfs:subClassOf" ];
+	"base:SeatType" -> "base:Flight" [ label = "rdfs:subClassOf" ];
+	"base:OverallRating" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"base:Country" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"base:Trip" -> "base:Flight" [ label = "rdfs:subClassOf" ];
+	"base:OverallRatingPositive" -> "base:OverallRating" [ label = "rdfs:subClassOf" ];
+	"base:Id" -> "base:Passenger" [ label = "rdfs:subClassOf" ];
+	"base:DatePublished" -> "base:Comment" [ label = "rdfs:subClassOf" ];
+	"base:OverallRatingNegative" -> "base:OverallRating" [ label = "rdfs:subClassOf" ];
+	"base:DateFlown" -> "base:Flight" [ label = "rdfs:subClassOf" ];
+
+}
