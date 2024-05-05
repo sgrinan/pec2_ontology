@@ -1,0 +1,120 @@
+{
+  "@context" : {
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"
+    },
+    "Comment" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment"
+    },
+    "hasAircraft" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasAircraft",
+      "@type" : "@id"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "DatePublished" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/DatePublished"
+    },
+    "hasComment" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasComment",
+      "@type" : "@id"
+    },
+    "hasDestination" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "OverallRating" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"
+    },
+    "hasCommentTitle" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCommentTitle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasDatePublished" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDatePublished",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin"
+    },
+    "DateFlown" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/DateFlown"
+    },
+    "OverallRatingNegative" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNegative"
+    },
+    "hasOverallRating" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOverallRating",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"
+    },
+    "hasId" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasId",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Aeroline" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aeroline"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"
+    },
+    "TripVerified" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/TripVerified"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"
+    },
+    "hasDateFlown" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDateFlown",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasOrigin" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin",
+      "@type" : "@id"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "Trip" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "CommentTitle" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/CommentTitle"
+    },
+    "hasCountry" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry",
+      "@type" : "@id"
+    },
+    "SeatType" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/SeatType"
+    },
+    "TypeTraveller" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/TypeTraveller"
+    },
+    "hasAeroline" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasAeroline",
+      "@type" : "@id"
+    },
+    "Id" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Id"
+    },
+    "OverallRatingPositive" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingPositive"
+    },
+    "OverallRatingNeutral" : {
+      "@id" : "http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNeutral"
+    }
+  }
+}
