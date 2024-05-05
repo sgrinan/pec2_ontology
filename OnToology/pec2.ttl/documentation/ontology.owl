@@ -1,0 +1,1552 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-5="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#sameAs -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#sameAs"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasAeroline -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasAeroline">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aeroline"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Define if flight has an aeroline</rdfs:comment>
+        <rdfs:label>hasAeroline</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasAircraft -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasAircraft">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Define if flight has an aircraft</rdfs:comment>
+        <rdfs:label>hasAircraft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasComment -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasComment">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:comment>Define if user writes a comment</rdfs:comment>
+        <rdfs:label>hasComment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Define if passanger has a country</rdfs:comment>
+        <rdfs:label>hasCountry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Define if flight has a destination</rdfs:comment>
+        <rdfs:label>hasDestination</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:comment>Define if flight has an origin</rdfs:comment>
+        <rdfs:label>hasOrigin</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCommentTitle -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCommentTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Define if comment&apos;s title is a String</rdfs:comment>
+        <rdfs:label>hasCommentTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDateFlown -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDateFlown">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Define if dateFlown is a Datetime type</rdfs:comment>
+        <rdfs:label>hasDateFlown</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDatePublished -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDatePublished">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Define if DatePublished is a Datetime type</rdfs:comment>
+        <rdfs:label>hasDatePublished</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasId">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Define if Id is integer</rdfs:comment>
+        <rdfs:label>hasId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOverallRating -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOverallRating">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Define if OverallRating is an integer</rdfs:comment>
+        <rdfs:label>hasOverallRating</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aeroline -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aeroline">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Represents an aeroline</rdfs:comment>
+        <rdfs:label>Aeroline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Represents an aircraft&apos;s model</rdfs:comment>
+        <rdfs:label>Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a comment&apos;s passenger</rdfs:comment>
+        <rdfs:label>Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/CommentTitle -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/CommentTitle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a comment&apos;s title</rdfs:comment>
+        <rdfs:label>CommentTitle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a country of a passenger</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/DateFlown -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/DateFlown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Represents a date&apos;s flight</rdfs:comment>
+        <rdfs:label>DateFlown</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/DatePublished -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/DatePublished">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Comment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a comment publication date</rdfs:comment>
+        <rdfs:label>DatePublished</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:comment>Represents a destination of a trip</rdfs:comment>
+        <rdfs:label>Destination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight">
+        <rdfs:comment>Represents a flight</rdfs:comment>
+        <rdfs:label>Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Id -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Id">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents an id</rdfs:comment>
+        <rdfs:label>Id</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:comment>Represents an origin of a trip</rdfs:comment>
+        <rdfs:label>Origin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a overall rating of a passenger</rdfs:comment>
+        <rdfs:label>OverallRating</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNegative -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNegative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a negative overall rating</rdfs:comment>
+        <rdfs:label>OverallRatingNegative</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNeutral -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNeutral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a neutral overall rating</rdfs:comment>
+        <rdfs:label>OverallRatingNeutral</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingPositive -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingPositive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Represents a positive overall rating</rdfs:comment>
+        <rdfs:label>OverallRatingPositive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger">
+        <rdfs:comment>Represents a passenger</rdfs:comment>
+        <rdfs:label>Passenger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/SeatType -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/SeatType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Represents a type of seat</rdfs:comment>
+        <rdfs:label>SeatType</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Represents a trip</rdfs:comment>
+        <rdfs:label>Trip</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/TripVerified -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/TripVerified">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:comment>Represents an a real user&apos;s trip</rdfs:comment>
+        <rdfs:label>TripVerified</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/TypeTraveller -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/TypeTraveller">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Represents a type of traveller</rdfs:comment>
+        <rdfs:label>TypeTraveller</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 0</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 1</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 10</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 2</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 3</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 4</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 5</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 6</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 7</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 8</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5#9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRating"/>
+        <rdfs:comment>Integer value 9</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/A380 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/A380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Aircraft model A380</rdfs:comment>
+        <rdfs:label>A380</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/resource/A380</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/A380-800 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/A380-800">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"/>
+        <rdfs:comment>Aircraft model A380-800</rdfs:comment>
+        <rdfs:label>A380-800</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Australia -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Australia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+        <rdfs:comment>Passenger&apos;s country of Australia</rdfs:comment>
+        <rdfs:label>Australia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"/>
+        <rdfs:comment>Aircraft model Boeing_737</rdfs:comment>
+        <rdfs:label>Boeing_737</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737-800 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737-800">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Aircraft model Boeing_737-800</rdfs:comment>
+        <rdfs:label>Boeing_737-800</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737_900 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737_900">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aircraft"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Aircraft model Boeing_737_900</rdfs:comment>
+        <rdfs:label>Boeing_737_900</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Doha -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Doha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Origin airport of Doha</rdfs:comment>
+        <rdfs:label>Doha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Edinburgh -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Edinburgh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Origin airport of Edinburgh</rdfs:comment>
+        <rdfs:label>Edinburgh</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Faro -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Faro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Origin airport of Faro</rdfs:comment>
+        <rdfs:label>Faro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Liverpool -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Liverpool">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Destination airport of Liverpool</rdfs:comment>
+        <rdfs:label>Liverpool</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Destination airport of London</rdfs:comment>
+        <rdfs:label>London</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London_Heathrow -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London_Heathrow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Destination airport of London Heathrow</rdfs:comment>
+        <rdfs:label>London_Heathrow</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London_Heathrow_via_Doha -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London_Heathrow_via_Doha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Destination airport of London Heathrow via Doha</rdfs:comment>
+        <rdfs:label>London_Heathrow_via_Doha</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Luton -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Luton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Destination airport of Luton</rdfs:comment>
+        <rdfs:label>Luton</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Paris_Beauvais -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Paris_Beauvais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Destination airport of Paris Beauvais</rdfs:comment>
+        <rdfs:label>Paris_Beauvais</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_0 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Ryanair"/>
+        <untitled-ontology-5:hasAircraft rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737_900"/>
+        <untitled-ontology-5:hasCountry rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom"/>
+        <untitled-ontology-5:hasDestination rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Luton"/>
+        <untitled-ontology-5:hasOrigin rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Faro"/>
+        <untitled-ontology-5:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</untitled-ontology-5:hasId>
+        <untitled-ontology-5:hasOverallRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-5:hasOverallRating>
+        <rdfs:comment>Passenger with Id=0</rdfs:comment>
+        <rdfs:label>Passenger_0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Ryanair"/>
+        <untitled-ontology-5:hasAircraft rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737-800"/>
+        <untitled-ontology-5:hasCountry rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom"/>
+        <untitled-ontology-5:hasDestination rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Paris_Beauvais"/>
+        <untitled-ontology-5:hasOrigin rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Edinburgh"/>
+        <untitled-ontology-5:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-5:hasId>
+        <untitled-ontology-5:hasOverallRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-5:hasOverallRating>
+        <rdfs:comment>Passenger with Id=1</rdfs:comment>
+        <rdfs:label>Passenger_1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar_Airways"/>
+        <untitled-ontology-5:hasCountry rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom"/>
+        <untitled-ontology-5:hasDestination rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London_Heathrow_via_Doha"/>
+        <untitled-ontology-5:hasOrigin rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Tokyo"/>
+        <untitled-ontology-5:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-5:hasId>
+        <untitled-ontology-5:hasOverallRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-5:hasOverallRating>
+        <rdfs:comment>Passenger with Id=2</rdfs:comment>
+        <rdfs:label>Passenger_2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Ryanair"/>
+        <untitled-ontology-5:hasAircraft rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Boeing_737"/>
+        <untitled-ontology-5:hasCountry rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom"/>
+        <untitled-ontology-5:hasDestination rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Liverpool"/>
+        <untitled-ontology-5:hasOrigin rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Faro"/>
+        <untitled-ontology-5:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</untitled-ontology-5:hasId>
+        <untitled-ontology-5:hasOverallRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</untitled-ontology-5:hasOverallRating>
+        <rdfs:comment>Passenger with Id=3</rdfs:comment>
+        <rdfs:label>Passenger_3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar_Airways"/>
+        <untitled-ontology-5:hasAircraft rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/A380-800"/>
+        <untitled-ontology-5:hasCountry rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar"/>
+        <untitled-ontology-5:hasDestination rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London_Heathrow"/>
+        <untitled-ontology-5:hasOrigin rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Doha"/>
+        <untitled-ontology-5:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-5:hasId>
+        <untitled-ontology-5:hasOverallRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-5:hasOverallRating>
+        <rdfs:comment>Passenger with Id=4</rdfs:comment>
+        <rdfs:label>Passenger_4</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar_Airways"/>
+        <untitled-ontology-5:hasAircraft rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/A380"/>
+        <untitled-ontology-5:hasCountry rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom"/>
+        <untitled-ontology-5:hasDestination rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/London"/>
+        <untitled-ontology-5:hasOrigin rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Doha"/>
+        <untitled-ontology-5:hasId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</untitled-ontology-5:hasId>
+        <untitled-ontology-5:hasOverallRating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-5:hasOverallRating>
+        <rdfs:comment>Passenger with Id=5</rdfs:comment>
+        <rdfs:label>Passenger_5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+        <rdfs:comment>Passenger&apos;s country of Qatar</rdfs:comment>
+        <rdfs:label>Qatar</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar_Airways -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar_Airways">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aeroline"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Aeroline Qatar Airways</rdfs:comment>
+        <rdfs:label>Qatar_Airways</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Ryanair -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Ryanair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Aeroline"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdfs:comment>Aeroline Ryanair</rdfs:comment>
+        <rdfs:label>Ryanair</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/resource/Ryanair</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Tokyo -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Tokyo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Flight"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Origin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Origin airport of Tokyo</rdfs:comment>
+        <rdfs:label>Tokyo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/United_Kingdom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+        <untitled-ontology-5:hasAeroline rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Qatar_Airways"/>
+        <rdfs:comment>Passenger&apos;s country of United Kingdom</rdfs:comment>
+        <rdfs:label>United_Kingdom</rdfs:label>
+        <rdfs:sameAs>https://dbpedia.org/resource/United_Kingdom</rdfs:sameAs>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Destination"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasCountry"/>
+        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Country"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOrigin"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasDestination"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Trip"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNegative"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNeutral"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingPositive"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOverallRating"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNeutral"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOverallRating"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingPositive"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/hasOverallRating"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/Passenger"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/w"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/OverallRatingNegative"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/su/ontologies/2024/3/untitled-ontology-5/o"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
